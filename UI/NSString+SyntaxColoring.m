@@ -60,7 +60,12 @@ char **stringArrayFromNSArray(NSArray *a) {
 #if TARGET_OS_IPHONE
     UIFont *font = [UIFont fontWithName:@"Courier" size:12.0];
 #else
-    NSFont *font = [NSFont fontWithName:@"Courier" size:12.0];
+	NSFont *font = [NSFont alloc];
+	if (@available(macOS 10.15, *)) {
+		font = [NSFont monospacedSystemFontOfSize:11.0 weight: NSFontWeightRegular];
+	} else {
+		font = [NSFont fontWithName:@"Menlo" size:11.0];
+	}
 #endif
     
     NSDictionary *attributes = @{ NSFontAttributeName : font };

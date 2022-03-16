@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
@@ -12,28 +13,28 @@
                 <outlet property="delegate" destination="137" id="224"/>
             </connections>
         </customObject>
-        <window title="Runtime Browser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="RBWindow" animationBehavior="default" id="21" userLabel="MyWindow">
+        <window title="Runtime Browser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="RBWindow" animationBehavior="default" toolbarStyle="compact" id="21" userLabel="MyWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="334" y="24" width="603" height="700"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="603" height="700"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <splitView dividerStyle="paneSplitter" id="158">
+                    <splitView fixedFrame="YES" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="158">
                         <rect key="frame" x="-4" y="-10" width="613" height="709"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <box title="Title" borderType="none" titlePosition="noTitle" id="160">
-                                <rect key="frame" x="-3" y="-2" width="619" height="207"/>
+                            <box fixedFrame="YES" borderType="none" title="Title" titlePosition="noTitle" id="160">
+                                <rect key="frame" x="-3" y="-2" width="312" height="715"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <view key="contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="619" height="207"/>
+                                <view key="contentView" id="aMM-zR-O64">
+                                    <rect key="frame" x="0.0" y="0.0" width="312" height="715"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <browser verticalHuggingPriority="750" allowsExpansionToolTips="YES" enabled="YES" hasHorizontalScroller="YES" allowsEmptySelection="YES" defaultColumnWidth="100" minColumnWidth="1" maxVisibleColumns="3" titled="YES" separatesColumns="YES" allowsTypeSelect="YES" columnsAutosaveName="RBBrowser" columnResizingType="auto" id="157">
-                                            <rect key="frame" x="5" y="5" width="609" height="204"/>
+                                        <browser verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" enabled="YES" hasHorizontalScroller="YES" allowsEmptySelection="YES" defaultColumnWidth="100" minColumnWidth="1" maxVisibleColumns="3" titled="YES" separatesColumns="YES" allowsTypeSelect="YES" columnsAutosaveName="RBBrowser" columnResizingType="auto" translatesAutoresizingMaskIntoConstraints="NO" id="157">
+                                            <rect key="frame" x="5" y="2" width="302" height="712"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <connections>
                                                 <action selector="cellClickedAction:" target="137" id="332"/>
@@ -42,19 +43,17 @@
                                         </browser>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="titleBar" size="12"/>
+                                <font key="titleFont" metaFont="titleBar" size="12" textStyle="headline"/>
                             </box>
-                            <box title="Title" borderType="none" titlePosition="noTitle" id="163">
-                                <rect key="frame" x="-3" y="209" width="619" height="504"/>
+                            <box fixedFrame="YES" borderType="none" title="Title" titlePosition="noTitle" id="163">
+                                <rect key="frame" x="304" y="-2" width="312" height="715"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <view key="contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="619" height="504"/>
+                                <view key="contentView" id="3iC-Rb-7PJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="312" height="715"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField verticalHuggingPriority="750" id="156">
-                                            <rect key="frame" x="5" y="488" width="603" height="13"/>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="599" translatesAutoresizingMaskIntoConstraints="NO" id="156">
+                                            <rect key="frame" x="5" y="699" width="603" height="13"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="Select a Class" id="268">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -62,43 +61,39 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="162">
-                                            <rect key="frame" x="5" y="10" width="609" height="470"/>
+                                        <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="162">
+                                            <rect key="frame" x="5" y="10" width="302" height="681"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="7ux-cM-wjF">
-                                                <rect key="frame" x="1" y="1" width="592" height="468"/>
+                                                <rect key="frame" x="1" y="1" width="300" height="679"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textView importsGraphics="NO" findStyle="panel" allowsDocumentBackgroundColorChange="YES" usesFontPanel="YES" verticallyResizable="YES" textReplacement="YES" smartInsertDelete="YES" id="155">
-                                                        <rect key="frame" x="0.0" y="0.0" width="586" height="468"/>
+                                                    <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" textReplacement="YES" smartInsertDelete="YES" id="155">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="679"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <size key="minSize" width="592" height="468"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="minSize" width="300" height="679"/>
                                                         <size key="maxSize" width="609" height="10000000"/>
-                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="592" height="468"/>
-                                                        <size key="maxSize" width="609" height="10000000"/>
+                                                        <color key="insertionPointColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="137" id="435"/>
                                                         </connections>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.98293513059616089" horizontal="YES" id="272">
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.98293513059616089" horizontal="YES" id="272">
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="271">
-                                                <rect key="frame" x="593" y="1" width="15" height="468"/>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="271">
+                                                <rect key="frame" x="285" y="1" width="16" height="679"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="titleBar" size="12"/>
+                                <font key="titleFont" metaFont="titleBar" size="12" textStyle="headline"/>
                                 <connections>
                                     <outlet property="nextKeyView" destination="157" id="165"/>
                                 </connections>
@@ -111,19 +106,19 @@
                     </splitView>
                 </subviews>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="4BFCE8F5-6695-40E1-9259-5FAE45A84C5C" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="276">
+            <toolbar key="toolbar" implicitIdentifier="4BFCE8F5-6695-40E1-9259-5FAE45A84C5C" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="276">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="280"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="281"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="282"/>
-                    <toolbarItem implicitItemIdentifier="5E8D4844-987B-436B-93F7-ABCED8423E1C" label="View" paletteLabel="View" id="291">
+                    <toolbarItem implicitItemIdentifier="5E8D4844-987B-436B-93F7-ABCED8423E1C" label="View" paletteLabel="View" navigational="YES" id="291">
                         <nil key="toolTip"/>
                         <size key="minSize" width="104" height="24"/>
                         <size key="maxSize" width="171" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="289">
-                            <rect key="frame" x="0.0" y="13" width="137" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="137" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <segmentedCell key="cell" state="on" borderStyle="border" alignment="left" style="automatic" trackingMode="selectOne" id="290">
+                            <segmentedCell key="cell" state="on" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="290">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment image="NSIconViewTemplate" width="32">
@@ -174,6 +169,7 @@
             <connections>
                 <outlet property="delegate" destination="137" id="233"/>
             </connections>
+            <point key="canvasLocation" x="139" y="132"/>
         </window>
         <menu title="Untitled Application" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
@@ -644,6 +640,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="3" y="-335"/>
         </menu>
         <customObject id="137" userLabel="AppController" customClass="AppController">
             <connections>
@@ -655,16 +652,16 @@
                 <outlet property="segmentedControl" destination="289" id="339"/>
             </connections>
         </customObject>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="202" userLabel="Panel (Preferences)" customClass="NSPanel">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="202" userLabel="Panel (Preferences)" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="436" width="265" height="94"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
             <view key="contentView" id="203">
-                <rect key="frame" x="0.0" y="6" width="265" height="94"/>
+                <rect key="frame" x="0.0" y="0.0" width="265" height="94"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button id="206">
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="206">
                         <rect key="frame" x="18" y="58" width="229" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Display properties default values" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="269">
@@ -675,7 +672,7 @@
                             <binding destination="210" name="value" keyPath="values.RTBDisplayPropertiesDefaultValues" id="444"/>
                         </connections>
                     </button>
-                    <button id="208">
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="208">
                         <rect key="frame" x="18" y="38" width="229" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Colorize header file" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="270">
@@ -686,7 +683,7 @@
                             <binding destination="210" name="value" keyPath="values.RTBColorizeHeaderFile" id="442"/>
                         </connections>
                     </button>
-                    <button id="436">
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="436">
                         <rect key="frame" x="18" y="18" width="229" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Add comment for blocks" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="437">
@@ -705,9 +702,9 @@
         <customObject id="400" customClass="NSFontManager"/>
     </objects>
     <resources>
-        <image name="NSColumnViewTemplate" width="16" height="10"/>
-        <image name="NSIconViewTemplate" width="10" height="10"/>
-        <image name="NSListViewTemplate" width="14" height="10"/>
-        <image name="NSPathTemplate" width="16" height="10"/>
+        <image name="NSColumnViewTemplate" width="18" height="14"/>
+        <image name="NSIconViewTemplate" width="15" height="14"/>
+        <image name="NSListViewTemplate" width="16" height="12"/>
+        <image name="NSPathTemplate" width="19" height="12"/>
     </resources>
 </document>

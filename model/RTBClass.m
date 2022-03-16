@@ -490,7 +490,10 @@
     
     // start with methods from the same image as the class
     [sortedImages removeObject:classFilePath];
-    [sortedImages insertObject:classFilePath atIndex:0];
+	if (classFilePath != nil) {
+		[sortedImages insertObject:classFilePath atIndex:0];
+	}
+   
     
     for(NSString *filePath in sortedImages) {
         NSDictionary *groupsByImageForCurrentFilePath = groupsByImage[filePath];
